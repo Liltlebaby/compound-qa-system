@@ -4,20 +4,20 @@ A web app that replaces the paper logbooks used at five QA checkpoints on a rubb
 
 [![Mobile walkthrough: current round, oven readings with live min/max checks, generated production report (demo mode)](docs/media/qa-preview.gif)](docs/media/qa-demo.mp4)
 
-*Preview of the mobile walkthrough. Select it to open the 40-second video (MP4, 1.2 MB). Recorded in the app's built-in demo mode, so every value is sample data.*
+_Preview of the mobile walkthrough. Select it to open the 40-second video (MP4, 1.2 MB). Recorded in the app's built-in demo mode, so every value is sample data._
 
 ![Three phone screens: production overview, oven checkpoint form and the generated report](docs/media/qa-mobile-screens.png)
 
 ## What it does
 
-| Area | Details |
-| --- | --- |
-| Automatic rounds | Rounds open by themselves every 30 minutes for each factory and shift on factory (Bangkok) time. Supervisors can open a past round to backfill |
-| Checkpoint forms | One form per checkpoint, reached by its QR label. Fields check min/max limits as they're typed. Missing values need an explanation, and drafts are saved on the phone until they're sent |
+| Area              | Details                                                                                                                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Automatic rounds  | Rounds open by themselves every 30 minutes for each factory and shift on factory (Bangkok) time. Supervisors can open a past round to backfill                                                                            |
+| Checkpoint forms  | One form per checkpoint, reached by its QR label. Fields check min/max limits as they're typed. Missing values need an explanation, and drafts are saved on the phone until they're sent                                  |
 | Production report | Built only when every checkpoint has reported: output against the round target, quality results against spec (PO, PRI, MV), defects by type, packing by sales order, and automatic observations when numbers don't add up |
-| Alarms | Out-of-range values raise alarms that stay open until a corrected value is sent or a supervisor records the fix. The original reading is kept |
-| Sharing | Reports go to WhatsApp, the clipboard or a download. Revisions are numbered and keep a change history |
-| Setup | Production plan, customers and sales orders, min/max limits per order, users, and printable QR labels for every checkpoint |
+| Alarms            | Out-of-range values raise alarms that stay open until a corrected value is sent or a supervisor records the fix. The original reading is kept                                                                             |
+| Sharing           | Reports go to WhatsApp, the clipboard or a download. Revisions are numbered and keep a change history                                                                                                                     |
+| Setup             | Production plan, customers and sales orders, min/max limits per order, users, and printable QR labels for every checkpoint                                                                                                |
 
 ![Desktop overview of a completed round: output against target, checkpoint status, quality results and an observation to follow up (demo data)](docs/media/qa-desktop-overview.png)
 
