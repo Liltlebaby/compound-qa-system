@@ -1,0 +1,26 @@
+/* Use the existing base styles for Thai forms, dialogs, and printed reports.
+   Prefix utilities to avoid collisions with variants such as .outline. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme) prefix(tw);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(tw) source(none);
+
+@source "../";
+
+@theme static {
+  --font-sans: 'Noto Sans Thai', 'Leelawadee UI', Tahoma, sans-serif;
+  --color-brand: #2365ae;
+  --color-brand-dark: #194e8b;
+  --color-brand-light: #ebf4ff;
+  --color-ink: #192f49;
+  --color-muted: #718399;
+  --color-line: #dce6f1;
+  --color-surface: #f5f8fd;
+  --color-warning: #9b650c;
+  --color-warning-light: #fff5de;
+  --color-danger: #a63b35;
+  --color-danger-light: #fff0ef;
+  --radius-control: 8px;
+  --radius-card: 12px;
+  --shadow-card: 0 2px 8px rgb(25 47 73 / 3%);
+  --shadow-login: 0 16px 48px rgb(35 101 174 / 9%);
+}

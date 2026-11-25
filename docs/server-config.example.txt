@@ -1,0 +1,7 @@
+Default port: 3000
+Optional environment settings before START-SERVER.cmd:
+QA_PORT=3000
+QA_HOST=0.0.0.0
+QA_DATA_DIR=D:\COMPOUND-QA-DATA
+QA_PUBLIC_URL=https://qa.your-domain.example
+Do not put passwords or API keys here. The public URL can also be configured in the web app.

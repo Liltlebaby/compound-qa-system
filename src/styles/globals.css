@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;450;500;550;600;650;700&display=swap');
+@import './tailwind.css';
+@import './base.css';
+@import './layout.css';
+@import './forms.css';
+@import './tools.css';
+@import './responsive.css';
+@import './round-controls.css';
+@import './stations.css';
+@import './reports.css';
+@import './alarms.css';
+@import './qr-studio.css';
+@import './qa-themes.css';
+@import './dashboard.css';
+@import './corporate-theme.css';

@@ -1,0 +1,415 @@
+@layer components {
+  /* QA rules and alarms */
+  .field-assist {
+    min-width: 0;
+  }
+  .field-limit {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 11px;
+    color: #6c7d73;
+    margin: 9px 0 0;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+  .field-limit svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .field-limit.is-red,
+  .report-value-red {
+    color: #bd2637 !important;
+    font-weight: 650;
+  }
+  .numeric-field.invalid input,
+  .qa-limit-error input {
+    color: #bd2637 !important;
+    border-color: #df8f98 !important;
+    background: #fff8f8;
+  }
+  .qa-limit-error > label {
+    color: #a72736;
+  }
+  .explanation-toggle {
+    font-size: 11px;
+    border: 0;
+    background: none;
+    color: var(--green);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 8px 0 2px;
+    text-align: left;
+  }
+  .missing-explanation {
+    font-size: 11px !important;
+    margin-top: 10px;
+    display: block;
+    line-height: 1.7;
+    color: #875a20;
+  }
+  .missing-explanation textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    font-size: 14px;
+    padding: 10px;
+    resize: vertical;
+    min-height: 73px;
+    border: 1px solid #e2c58f;
+    border-radius: 8px;
+    background: #fffdf8;
+  }
+  .missing-explanation textarea[aria-invalid='true'] {
+    border-color: #c4444f;
+  }
+  .review-explanation {
+    align-items: flex-start;
+    background: #fffaf0;
+    padding: 12px !important;
+  }
+  .review-explanation strong {
+    max-width: 60%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .oven-setting-alert {
+    font-size: 12px;
+    color: #bd2637;
+    margin: 8px 0 0;
+    padding: 10px;
+    background: #fff3f4;
+    border-radius: 8px;
+  }
+  .limits-selectors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .limits-selectors .qa-select-trigger {
+    width: 100%;
+  }
+  .limits-fields > section {
+    margin: 22px 0;
+  }
+  .limits-fields h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .limit-setting-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 120px 120px;
+    gap: 13px;
+    align-items: center;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .limit-setting-row > div strong {
+    font-size: 13px;
+    display: block;
+  }
+  .limit-setting-row small {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .limit-setting-row .input-label {
+    font-size: 11px;
+  }
+  .limit-setting-row input {
+    min-width: 0;
+    width: 100%;
+    font-size: 15px;
+    padding: 9px;
+  }
+  .rules-checkbox {
+    margin: 20px 0 12px;
+    align-items: flex-start;
+  }
+  .limits-fields .notice {
+    margin: 15px 0;
+  }
+  .limits-fields input:disabled {
+    color: #65736b;
+    opacity: 1;
+  }
+  .alarm-banner {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 16px 18px;
+    border: 1px solid #f0b8bd;
+    border-radius: 12px;
+    background: #fff1f2;
+    color: #a42132;
+    margin-bottom: 20px;
+  }
+  .alarm-banner > svg {
+    flex-shrink: 0;
+  }
+  .alarm-banner > div {
+    flex: 1;
+    min-width: 0;
+  }
+  .alarm-banner strong {
+    font-size: 14px;
+  }
+  .alarm-banner p {
+    font-size: 12px;
+    margin: 4px 0 0;
+  }
+  .alarm-banner .button {
+    flex-shrink: 0;
+    color: #a42132;
+    border-color: #e5a8ae;
+    background: white;
+  }
+  .alarm-banner.warning {
+    border-color: #ead3a8;
+    background: #fffaef;
+    color: #865c24;
+  }
+  .alarm-nav-count {
+    background: #fbe0e3 !important;
+    color: #b22738 !important;
+  }
+  .alarm-center > .notice {
+    margin-bottom: 20px;
+  }
+  .alarm-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 19px;
+  }
+  .alarm-filters button {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--line);
+    padding: 10px 13px;
+    border-radius: 9px;
+    font-size: 12px;
+    color: #617168;
+    min-height: 43px;
+  }
+  .alarm-filters button.active {
+    color: #a42132;
+    border-color: #d9959d;
+    background: #fff4f4;
+  }
+  .alarm-filters span {
+    font-size: 11px;
+    font-weight: 650;
+  }
+  .alarm-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+  }
+  .alarm-card {
+    min-width: 0;
+    background: white;
+    border: 1px solid #e7b9bd;
+    border-top: 4px solid #c93245;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .alarm-card.warning {
+    border-color: #ead6af;
+    border-top-color: #ca963c;
+  }
+  .alarm-card.resolved {
+    border-color: #d8e6de;
+    border-top-color: #6a9f80;
+  }
+  .alarm-card-heading {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .alarm-card-heading > div {
+    min-width: 0;
+    flex: 1;
+  }
+  .alarm-card-heading strong {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+  .alarm-card-heading p {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 4px 0 0;
+  }
+  .alarm-card-heading > .badge {
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+  .alarm-card-icon {
+    width: 33px;
+    height: 33px;
+    border-radius: 8px;
+    background: #fff0f1;
+    display: grid;
+    place-items: center;
+    color: #b52b3c;
+    flex-shrink: 0;
+  }
+  .alarm-card.warning .alarm-card-icon {
+    background: #fff9e9;
+    color: #ad7e29;
+  }
+  .alarm-card.resolved .alarm-card-icon {
+    background: #edf6f0;
+    color: #3c8d63;
+  }
+  .alarm-message {
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+    margin: 17px 0;
+    color: #ae2738;
+    font-weight: 550;
+  }
+  .warning .alarm-message {
+    color: #8a662b;
+  }
+  .resolved .alarm-message {
+    color: #61736a;
+  }
+  .alarm-time {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+  }
+  .alarm-ack-info {
+    background: #f6f8f7;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 12px;
+    color: #596e60;
+    margin-bottom: 13px;
+  }
+  .alarm-ack-info span {
+    display: block;
+    white-space: pre-wrap;
+    margin-top: 5px;
+  }
+  .alarm-history {
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+  .alarm-history > summary {
+    cursor: pointer;
+    color: #67796d;
+  }
+  .alarm-history > div {
+    border-left: 2px solid #e2eae5;
+    margin: 14px 0 0;
+    padding-left: 12px;
+  }
+  .alarm-history strong {
+    display: block;
+    font-size: 12px;
+  }
+  .alarm-history span {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .alarm-history p {
+    margin: 5px 0 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+  }
+  .report-missing-values {
+    border: 1px solid #ead7b4;
+    background: #fffcf5;
+  }
+  @media (max-width: 700px) {
+    .limits-selectors {
+      grid-template-columns: 1fr;
+    }
+    .limit-setting-row {
+      grid-template-columns: minmax(0, 1fr) 82px 82px;
+      gap: 8px;
+    }
+    .limit-setting-row > div strong {
+      font-size: 12px;
+    }
+    .limit-setting-row input {
+      font-size: 16px;
+      padding: 8px;
+    }
+    .limit-setting-row small {
+      font-size: 10px;
+    }
+    .alarm-banner {
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 14px;
+    }
+    .alarm-banner > div {
+      flex-basis: calc(100% - 38px);
+    }
+    .alarm-banner > .button {
+      margin-left: 34px;
+    }
+    .alarm-banner strong {
+      font-size: 13px;
+    }
+    .alarm-list {
+      grid-template-columns: 1fr;
+    }
+    .alarm-card {
+      padding: 17px 14px;
+    }
+    .alarm-card-heading > .badge {
+      font-size: 9px;
+    }
+    .alarm-filters {
+      gap: 6px;
+    }
+    .alarm-filters button {
+      font-size: 11px;
+      padding: 9px 10px;
+    }
+    .missing-explanation textarea {
+      font-size: 16px;
+    }
+    .field-limit {
+      font-size: 11px;
+    }
+    .alarm-card-heading strong {
+      font-size: 13px;
+    }
+  }
+
+  .report-critical {
+    background: #fff3f4;
+    border-color: #edbbc1;
+  }
+  .report-critical h4,
+  .report-critical li {
+    color: #ae2738;
+  }
+  .report-missing-values > summary {
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .report-missing-values > div {
+    margin-top: 14px;
+  }
+  .settings-tabs {
+    overflow-x: auto;
+  }
+  .settings-tabs button {
+    flex-shrink: 0;
+  }
+}

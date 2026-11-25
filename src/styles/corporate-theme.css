@@ -1,0 +1,199 @@
+@layer components {
+  /* The company blue is the primary accent. QA identities and alarm colors remain semantic. */
+  .company-logo {
+    width: 50px;
+    height: auto;
+    aspect-ratio: 1972 / 1907;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+  }
+  .company-logo-large {
+    width: 112px;
+  }
+  .brand {
+    gap: 8px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 12px;
+  }
+  .brand small {
+    font-size: 9px;
+  }
+  .sidebar {
+    background: #194e8b;
+    border-color: #194e8b;
+  }
+  .sidebar .brand {
+    color: white;
+  }
+  .sidebar .brand b {
+    color: white;
+  }
+  .sidebar .brand .company-logo {
+    background: white;
+    padding: 3px;
+    border-radius: 9px;
+  }
+  .sidebar .brand small {
+    color: #d3e4f8;
+  }
+  .sidebar nav button {
+    color: #e2edfb;
+  }
+  .sidebar nav button:hover {
+    background: #ffffff14;
+  }
+  .sidebar nav button.active {
+    background: #eaf3ff;
+    color: #194e8b;
+  }
+  .sidebar nav button.active:before {
+    background: #a8d0ff;
+  }
+  .sidebar-note,
+  .sidebar .logout-link {
+    color: #c2d8f3;
+  }
+  .sidebar .profile {
+    border-color: #ffffff26;
+  }
+  .sidebar .profile strong {
+    color: white;
+  }
+  .sidebar .profile span:not(.avatar) {
+    color: #c2d8f3;
+  }
+  .sidebar .avatar {
+    background: #ffffff1c;
+    color: #d0e4fb;
+  }
+  .sidebar-bottom > .button.ghost {
+    color: #d5e7fb;
+  }
+  .sidebar-bottom > .button.ghost:hover {
+    background: #ffffff14;
+    color: white;
+  }
+  .icon-button:hover {
+    background: #f0f6fd;
+  }
+  .mode-banner {
+    background: #edf5ff;
+    border-color: #dce9f7;
+    color: #526e91;
+  }
+  .mode-banner.live {
+    background: #f8fbff;
+  }
+  .live-dot {
+    background: #4a86c7;
+  }
+  .topbar,
+  .scope-toolbar {
+    border-bottom-color: #e1eaf4;
+  }
+  .button.outline {
+    border-color: #d7e3f0;
+    color: #344f6d;
+  }
+  .button.outline:hover:not(:disabled) {
+    background: #f1f7ff;
+    border-color: #adc9e8;
+  }
+  .notice.neutral {
+    background: #eef5fd;
+    color: #5a7391;
+  }
+  .icon-square {
+    background: #eef5fd;
+    color: #42688f;
+  }
+  .avatar {
+    background: #eaf2fc;
+    color: #6a8aaf;
+  }
+  .toast {
+    background: #193f70;
+    box-shadow: 0 4px 20px #16385c22;
+  }
+  .settings-save {
+    background: #edf5ff;
+  }
+  .report-output {
+    background: #edf5ff;
+    border-color: #d7e6f7;
+  }
+  .report-output-track {
+    background: #dce8f6;
+  }
+  .report-output-main > span,
+  .report-output-bottom p {
+    color: #526f91;
+  }
+  .report-revision-note,
+  .report-setting-note,
+  .report-qa-notes {
+    background: #f3f7fd;
+  }
+  .report-count-table thead th {
+    background: #f0f5fc;
+    color: #627c9a;
+  }
+  .qa-select-trigger:hover {
+    border-color: #a9c7e8;
+  }
+  .qa-select-trigger:focus-visible,
+  .qa-select-trigger[aria-expanded='true'] {
+    border-color: #6d9fd7;
+    box-shadow: 0 0 0 3px #2365ae18;
+  }
+  .qa-select-option.is-selected {
+    background: #edf5ff;
+    color: #215c9b;
+  }
+  .qa-select-option:hover {
+    background: #f3f8ff;
+  }
+  .qa-select-option.is-active {
+    background: #f3f8ff;
+  }
+  .qa-select-option.is-selected.is-active {
+    background: #e2efff;
+  }
+  .qa-select-check {
+    color: #2365ae;
+  }
+  .is-selected .qa-select-option-text small {
+    color: #6c8bb2;
+  }
+  .is-selected .qa-select-option-badge {
+    background: #dcecff;
+    color: #3e6d9f;
+  }
+  .form-overlay::backdrop,
+  .modal::backdrop {
+    background: #152d4960;
+  }
+  .dashboard-schedule .notice {
+    background: transparent;
+    color: #6f8198;
+  }
+  .qr-destination:not(.is-demo) {
+    border-left-color: var(--green);
+    background: var(--green-light);
+    color: var(--green);
+  }
+  @media (max-width: 700px) {
+    .mobile-brand .company-logo {
+      width: 39px;
+    }
+    .mobile-brand {
+      gap: 8px;
+      color: #264f80;
+    }
+    .mobile-nav button.active {
+      color: #2365ae;
+    }
+  }
+}

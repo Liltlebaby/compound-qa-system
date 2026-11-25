@@ -1,0 +1,17 @@
+node_modules/
+dist/
+data/
+data-dev/
+licenses/
+package-lock.json
+migrations/
+.env*
+*.log
+
+.postgres/
+*.dump
+*.partial
+runtime/
+prerequisites/
+release-artifacts/
+release.json

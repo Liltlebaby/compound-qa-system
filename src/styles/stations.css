@@ -1,0 +1,544 @@
+@layer components {
+  .oven-closed-toggle {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .form-overlay .oven-closed-toggle[aria-pressed='true'] {
+    background: #516276 !important;
+    border-color: #516276 !important;
+    color: white;
+  }
+  .oven-closed-message {
+    display: flex;
+    gap: 12px;
+    padding: 20px 16px;
+    background: #f0f3f7;
+    color: #596c82;
+    border-radius: 10px;
+  }
+  .oven-closed-message strong {
+    font-size: 15px;
+  }
+  .oven-closed-message p {
+    font-size: 12px;
+    margin: 5px 0 8px;
+  }
+  .oven-closed-message small {
+    display: block;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .oven-card.is-closed {
+    border-color: #d1dbe6 !important;
+  }
+  .oven-tabs button.is-closed:not(.active) {
+    background: #f1f4f8;
+    border-color: #d3dce7;
+    color: #758499;
+  }
+  .oven-tabs button.is-closed:not(.active) small {
+    color: #758499;
+  }
+  @media (max-width: 700px) {
+    .oven-closed-toggle {
+      font-size: 11px;
+      padding: 7px 9px;
+      min-height: 40px;
+    }
+    .oven-card-heading {
+      flex-wrap: wrap;
+    }
+    .oven-change-badge {
+      order: 2;
+    }
+  }
+  .oven-context {
+    border: 1px solid var(--line);
+    background: #f9fbfa;
+    border-radius: 9px;
+    margin-bottom: 10px;
+  }
+  .oven-context > summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    padding: 12px 14px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .oven-context > summary::-webkit-details-marker {
+    display: none;
+  }
+  .oven-context > summary > strong {
+    color: var(--green);
+  }
+  .oven-context > summary > span {
+    color: var(--muted);
+    font-size: 11px;
+  }
+  .oven-context > summary > svg {
+    margin-left: auto;
+  }
+  .oven-context .form-context {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 0;
+    border-radius: 0 0 9px 9px;
+  }
+  .oven-entry {
+    margin-top: 20px;
+  }
+  .oven-entry-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .oven-entry-heading > span {
+    font-size: 11px;
+    color: var(--green);
+  }
+  .oven-tabs {
+    display: none;
+  }
+  .oven-entry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .oven-card {
+    border: 1px solid #dce6e0;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    min-width: 0;
+  }
+  .oven-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .oven-letter {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: #eaf4ee;
+    color: var(--green);
+    font-size: 20px;
+    font-weight: 650;
+  }
+  .oven-card-heading h2 {
+    font-size: 16px;
+  }
+  .oven-card-heading p {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+  .oven-change-badge {
+    font-size: 9px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    background: #fff3dc;
+    color: #9f732c;
+    margin-left: auto;
+  }
+  .oven-current-settings {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 10px;
+    background: #f5f8f6;
+    border-radius: 8px;
+    padding: 11px 12px;
+    margin-bottom: 18px;
+  }
+  .oven-current-settings > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .oven-current-settings > div + div {
+    border-left: 1px solid #dfe7e2;
+    padding-left: 12px;
+  }
+  .oven-current-settings span {
+    font-size: 10px;
+    color: #89988e;
+  }
+  .oven-current-settings strong {
+    font-size: 13px;
+    font-weight: 550;
+    color: #506a5a;
+  }
+  .oven-current-settings strong small {
+    font-size: 11px;
+    font-weight: 400;
+  }
+  .oven-measurements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 12px;
+  }
+  .oven-measurement {
+    min-width: 0;
+  }
+  .oven-measurement.pv-field {
+    grid-column: 1/-1;
+  }
+  .oven-measurement > label:first-child {
+    display: block;
+    font-size: 12px;
+    font-weight: 550;
+    margin-bottom: 7px;
+  }
+  .oven-number-wrap {
+    position: relative;
+  }
+  .oven-number-wrap input {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #d5e0d9;
+    border-radius: 8px;
+    padding: 11px 36px 11px 12px;
+    font-size: 27px;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    background: #fff;
+  }
+  .oven-number-wrap input:focus {
+    outline: 0;
+    border-color: #3a8b69;
+    box-shadow: 0 0 0 3px #19725416;
+  }
+  .oven-number-wrap input:disabled {
+    background: #f5f7f5;
+    color: #9aa69d;
+  }
+  .oven-number-wrap input::placeholder {
+    color: #cad4ce;
+    font-weight: 400;
+  }
+  .oven-number-wrap > span {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #819187;
+    pointer-events: none;
+  }
+  .pv-field .oven-number-wrap input {
+    font-size: 33px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .oven-na {
+    font-size: 10px;
+    color: #8c9b91;
+    margin-top: 8px;
+    gap: 6px;
+  }
+  .oven-na input {
+    width: 14px;
+    height: 14px;
+  }
+  .oven-setting-editor {
+    border-top: 1px solid #edf1ee;
+    margin-top: 17px;
+    padding-top: 12px;
+  }
+  .oven-setting-editor > summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    color: #72887a;
+    cursor: pointer;
+  }
+  .oven-setting-editor > summary::-webkit-details-marker {
+    display: none;
+  }
+  .oven-setting-editor > summary small {
+    margin-left: auto;
+    font-size: 9px;
+    color: #a1ada5;
+  }
+  .oven-setting-editor-body {
+    padding-top: 14px;
+  }
+  .oven-setting-editor-body > p {
+    font-size: 10px;
+    color: #8d9c92;
+    margin-bottom: 12px;
+  }
+  .oven-setting-editor-body .input-label {
+    font-size: 11px;
+  }
+  .oven-setting-editor-body input {
+    font-size: 16px;
+  }
+  .oven-setting-editor-body small {
+    font-size: 9px;
+    color: #91a096;
+    font-weight: 400;
+  }
+  .oven-setting-editor-body > .button {
+    margin-top: 10px;
+  }
+  .oven-step-actions {
+    display: none;
+  }
+  @media (max-width: 700px) {
+    .oven-context > summary {
+      padding: 10px 11px;
+      font-size: 11px;
+      gap: 4px 8px;
+    }
+    .oven-context > summary > span {
+      font-size: 10px;
+    }
+    .oven-entry {
+      margin-top: 18px;
+    }
+    .oven-entry-heading {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    .oven-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+    .oven-tabs button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 47px;
+      border: 1px solid #dce5df;
+      border-radius: 8px;
+      background: #fff;
+      color: #809087;
+      font-size: 12px;
+    }
+    .oven-tabs button.active {
+      background: #eaf4ee;
+      border-color: #6aab8b;
+      color: #1b7252;
+      font-weight: 600;
+      box-shadow: 0 0 0 2px #1972540a;
+    }
+    .oven-tabs button small {
+      font-size: 9px;
+      display: flex;
+      color: #a3afa7;
+    }
+    .oven-tabs button.complete small {
+      color: #348364;
+    }
+    .oven-tabs button:focus-visible {
+      outline: 2px solid #2d8b66;
+      outline-offset: 2px;
+    }
+    .oven-entry-grid {
+      display: block;
+    }
+    .oven-card {
+      display: none;
+      padding: 16px;
+      border-radius: 11px;
+    }
+    .oven-card.is-active {
+      display: block;
+    }
+    .oven-card-heading {
+      margin-bottom: 14px;
+    }
+    .oven-card-heading h2 {
+      font-size: 16px;
+    }
+    .oven-current-settings {
+      margin-bottom: 17px;
+      padding: 10px 11px;
+    }
+    .oven-current-settings strong {
+      font-size: 12px;
+    }
+    .oven-measurements {
+      gap: 14px 11px;
+    }
+    .oven-measurement > label:first-child {
+      font-size: 11px;
+    }
+    .oven-number-wrap input {
+      font-size: 26px;
+      min-height: 59px;
+      padding-left: 11px;
+      padding-right: 32px;
+    }
+    .pv-field .oven-number-wrap input {
+      font-size: 34px;
+      min-height: 64px;
+    }
+    .oven-number-wrap > span {
+      right: 10px;
+      font-size: 11px;
+    }
+    .oven-step-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .oven-step-actions > .button {
+      font-size: 11px;
+      padding: 9px 11px;
+      min-height: 42px;
+    }
+    .oven-step-actions > span {
+      font-size: 10px;
+      color: #99a69d;
+    }
+    .oven-step-actions > .oven-all-done {
+      color: var(--green);
+      font-weight: 550;
+    }
+    .oven-setting-editor > summary {
+      font-size: 10px;
+    }
+    .oven-setting-editor > summary small {
+      font-size: 8px;
+    }
+    .oven-setting-editor-body .two-col {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .oven-setting-editor-body .input-label {
+      font-size: 10px;
+    }
+    .oven-setting-editor-body input {
+      padding: 9px;
+      font-size: 17px;
+    }
+    .oven-setting-editor-body small {
+      font-size: 8px;
+    }
+  }
+
+  .oven-form {
+    width: min(920px, 100vw);
+  }
+  .oven-mobile-footer {
+    display: none;
+  }
+  @media (max-width: 700px) {
+    .oven-step-actions {
+      display: none;
+    }
+    .oven-form .oven-desktop-review {
+      display: none;
+    }
+    .oven-mobile-footer {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+    }
+    .oven-mobile-footer > .button:first-child {
+      flex: 0 0 42px;
+      padding: 8px;
+      min-width: 42px;
+    }
+    .oven-mobile-footer > .button:nth-child(2) {
+      flex: 1;
+      padding: 10px 8px;
+    }
+    .oven-mobile-footer > .button:last-child:not(:nth-child(2)) {
+      flex: 0 0 82px;
+      padding: 10px 8px;
+    }
+    .oven-form .oven-mobile-footer > .button {
+      font-size: 12px;
+      min-height: 46px;
+    }
+    .oven-form .oven-mobile-footer > .button:disabled {
+      opacity: 0.4;
+    }
+  }
+
+  .tower-complete {
+    display: flex;
+    color: #337c59;
+    margin-left: auto;
+  }
+  .tower-card-hint {
+    font-size: 10px;
+    color: #92a197;
+    border-top: 1px solid #edf2ee;
+    margin-top: 18px;
+    padding-top: 12px;
+  }
+  .tower-service-numbers {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .tower-service-numbers:empty {
+    display: none;
+  }
+  .tower-service-numbers .input-label {
+    font-size: 12px;
+  }
+  .tower-service-numbers input {
+    font-size: 18px;
+  }
+  .tower-measurements input[aria-invalid='true'] {
+    border-color: #c87565;
+  }
+  .tower-card .oven-card-heading {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 700px) {
+    .tower-tabs {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .tower-tabs button {
+      font-size: 11px;
+      min-height: 43px;
+      gap: 6px;
+    }
+    .tower-tabs button small {
+      font-size: 9px;
+    }
+    .tower-card .oven-card-heading {
+      margin-bottom: 17px;
+    }
+    .tower-service-numbers .input-label {
+      font-size: 11px;
+    }
+    .tower-service-numbers input {
+      font-size: 18px;
+      min-height: 45px;
+    }
+    .tower-card-hint {
+      font-size: 10px;
+      line-height: 1.7;
+    }
+    .tower-measurements .oven-number-wrap input {
+      font-size: 30px;
+    }
+    .tower-measurements .pv-field .oven-number-wrap input {
+      font-size: 34px;
+    }
+  }
+}

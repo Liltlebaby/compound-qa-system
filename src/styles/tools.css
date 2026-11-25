@@ -1,0 +1,289 @@
+@layer components {
+  .settings-tabs {
+    display: flex;
+    gap: 25px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+    overflow-x: auto;
+  }
+  .settings-tabs button {
+    white-space: nowrap;
+    padding: 0 0 14px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: none;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .settings-tabs button.active {
+    border-bottom-color: var(--green);
+    color: var(--green);
+    font-weight: 600;
+  }
+  .settings-content {
+    max-width: 900px;
+  }
+  .settings-content > .panel > h2 {
+    margin-bottom: 8px;
+  }
+  .settings-content > .panel > .muted {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .settings-content > .panel > .input-label {
+    margin-top: 18px;
+  }
+  .settings-subhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 23px 0 12px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+  .settings-subhead small {
+    font-weight: 400;
+    color: var(--muted);
+  }
+  .recipe-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .recipe-row {
+    display: grid;
+    grid-template-columns: minmax(70px, 1fr) 90px 30px;
+    align-items: end;
+    gap: 9px;
+    flex: 1;
+    min-width: 240px;
+  }
+  .recipe-row .input-label {
+    font-size: 11px;
+  }
+  .recipe-row input {
+    padding: 8px 10px;
+  }
+  .recipe-list + .button {
+    margin-top: 10px;
+  }
+  .spec-settings {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+  }
+  .spec-setting {
+    background: #f9fbfa;
+    border: 1px solid var(--line);
+    padding: 14px;
+    border-radius: 7px;
+  }
+  .spec-setting > strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 9px;
+  }
+  .spec-setting .checkbox {
+    font-size: 10px;
+  }
+  .range-inputs {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--muted);
+  }
+  .range-inputs input {
+    width: 50%;
+    min-width: 0;
+    padding: 8px;
+    font-size: 12px;
+  }
+  .spec-setting > p {
+    font-size: 10px;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  .burner-settings {
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    margin-top: 22px;
+    font-size: 12px;
+  }
+  .burner-setting-row {
+    display: grid;
+    grid-template-columns: 45px repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .burner-setting-row .input-label {
+    font-size: 10px;
+  }
+  .burner-setting-row input {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+  .settings-save {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 22px 0;
+    padding: 18px;
+    background: #eef4f0;
+    border-radius: 7px;
+  }
+  .settings-save span {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .unit-row {
+    margin: 20px 0;
+  }
+  .confirm-units {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--green-light);
+    border-radius: 7px;
+    display: flex;
+  }
+  .required-stations {
+    display: flex;
+    flex-direction: column;
+  }
+  .required-stations > div {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .required-stations > div:last-child {
+    border-bottom: 0;
+  }
+  .required-stations input:not([type='checkbox']) {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .required-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+  .required-fields .checkbox {
+    align-items: flex-start;
+    font-size: 11px;
+  }
+  .required-fields .checkbox input {
+    margin-top: 1px;
+  }
+  .required-fields small {
+    font-size: 9px;
+    color: var(--muted);
+    display: block;
+  }
+  .check-row {
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+  }
+  .settings-inline-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 25px;
+  }
+  .member-row {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    width: 100%;
+    background: white;
+  }
+  .member-row:last-child {
+    border: 0;
+  }
+  .member-row > span:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+  }
+  .member-row strong {
+    display: block;
+    font-size: 12px;
+  }
+  .member-row small {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    overflow-wrap: anywhere;
+  }
+  .member-row > svg {
+    color: var(--muted);
+  }
+  .connection-row {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-top: 1px solid var(--line);
+    padding: 20px 0;
+  }
+  .connection-row > div {
+    flex: 1;
+  }
+  .connection-row h3 {
+    font-size: 12px;
+  }
+  .connection-row p {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+  .connection-row .badge {
+    font-size: 10px;
+  }
+  .toast {
+    position: fixed;
+    bottom: 28px;
+    left: calc(50% + 104px);
+    transform: translateX(-50%);
+    z-index: 130;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: #193d2e;
+    color: white;
+    padding: 13px 15px;
+    border-radius: 9px;
+    max-width: calc(100% - 36px);
+    font-size: 12px;
+    box-shadow: 0 4px 20px #16332322;
+  }
+  .toast > button {
+    background: none;
+    color: white;
+    border: 0;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+  }
+  .mobile-nav,
+  .more-menu {
+    display: none;
+  }
+  .spin {
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

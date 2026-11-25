@@ -1,0 +1,480 @@
+@layer components {
+  .scope-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 36px;
+    background: white;
+    border-bottom: 1px solid var(--line);
+  }
+  .scope-toolbar label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .scope-toolbar select {
+    font-size: 12px;
+    padding: 7px 30px 7px 12px;
+    min-height: 36px;
+    color: var(--ink);
+  }
+  .scope-toolbar > span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .shift-choice .button {
+    justify-content: space-between;
+    min-height: 58px;
+    font-size: 16px;
+  }
+  .form-context select {
+    font-size: 11px;
+    padding: 4px 7px;
+    max-width: 230px;
+  }
+  @media (max-width: 1190px) {
+    .scope-toolbar {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  @media (max-width: 700px) {
+    .scope-toolbar {
+      padding: 11px 18px;
+      gap: 15px;
+    }
+    .scope-toolbar label {
+      gap: 7px;
+      font-size: 10px;
+    }
+    .scope-toolbar select {
+      padding: 7px 24px 7px 9px;
+      font-size: 11px;
+      max-width: 172px;
+    }
+    .scope-toolbar > span {
+      display: none;
+    }
+    .form-context select {
+      max-width: 200px;
+    }
+  }
+  @media print {
+    .scope-toolbar {
+      display: none !important;
+    }
+  }
+
+  .settings-content .panel > .button {
+    margin-top: 16px;
+  }
+
+  .date-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0 0 14px;
+  }
+  .date-toolbar > .button {
+    min-height: 42px;
+  }
+  .date-toolbar > .button:first-child {
+    font-size: 13px;
+  }
+  .date-toolbar > .muted {
+    font-size: 11px;
+  }
+  @media (max-width: 700px) {
+    .date-toolbar {
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .date-toolbar > .button:first-child {
+      font-size: 12px;
+      padding: 9px 12px;
+    }
+    .date-toolbar > .muted {
+      font-size: 10px;
+    }
+    .date-toolbar > .button.ghost {
+      font-size: 11px;
+      margin-left: auto;
+    }
+  }
+
+  .scope-toolbar > .scope-date-controls {
+    margin: 0;
+    gap: 8px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+  }
+  .scope-date-controls > .button:first-child {
+    min-height: 36px;
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+  .scope-date-controls > .muted {
+    display: none;
+  }
+  @media (max-width: 1100px) {
+    .scope-toolbar > span {
+      display: none;
+    }
+  }
+  @media (max-width: 700px) {
+    .scope-toolbar {
+      gap: 12px;
+    }
+    .scope-toolbar > label:first-child {
+      flex-shrink: 0;
+    }
+    .scope-toolbar > label:first-child select {
+      width: 80px;
+      max-width: 80px;
+    }
+    .scope-toolbar > label:nth-child(2) {
+      flex: 1;
+      min-width: 0;
+    }
+    .scope-toolbar > label:nth-child(2) select {
+      flex: 1;
+      min-width: 0;
+      width: 100%;
+      max-width: 172px;
+    }
+    .scope-toolbar > .scope-date-controls {
+      flex: 0 0 38px;
+      gap: 0;
+    }
+    .scope-date-controls .calendar-date-label,
+    .scope-date-controls > .date-return {
+      display: none;
+    }
+    .scope-date-controls > .button:first-child {
+      width: 38px;
+      height: 38px;
+      min-height: 38px;
+      padding: 0;
+      justify-content: center;
+    }
+  }
+
+  .scan-scope {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--green);
+    font-size: 13px;
+  }
+  .scan-scope small {
+    font-size: 10px;
+    color: var(--muted);
+  }
+  @media (max-width: 700px) {
+    .scan-scope {
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+    .scan-scope small {
+      font-size: 9px;
+    }
+  }
+
+  .backfill-form-button {
+    margin: 0 0 18px;
+    width: 100%;
+  }
+  @media (max-width: 700px) {
+    .heading-actions {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      max-width: 150px;
+    }
+    .heading-actions > .button {
+      white-space: nowrap;
+    }
+  }
+
+  .qa-select {
+    position: relative;
+    min-width: 0;
+    display: block;
+  }
+  .qa-select-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #d5dfd9;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+    line-height: 1.4;
+    transition:
+      border-color 0.15s,
+      box-shadow 0.15s;
+  }
+  .qa-select-trigger:hover {
+    border-color: #91b5a4;
+  }
+  .qa-select-trigger:focus-visible,
+  .qa-select-trigger.is-open {
+    outline: 0;
+    border-color: #3d8a6c;
+    box-shadow: 0 0 0 3px #19725418;
+  }
+  .qa-select-trigger:disabled {
+    background: #f4f7f5;
+    color: #8b9790;
+    cursor: default;
+  }
+  .qa-select-trigger.has-description {
+    min-height: 54px;
+  }
+  .qa-select-icon {
+    display: flex;
+    flex-shrink: 0;
+    color: #739183;
+  }
+  .qa-select-value {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .qa-select-value strong {
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .qa-select-value small {
+    font-size: 10px;
+    color: #7f8e85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .qa-select-chevron {
+    flex-shrink: 0;
+    color: #6f8377;
+    transition: transform 0.15s;
+  }
+  .is-open .qa-select-chevron {
+    transform: rotate(180deg);
+  }
+  .qa-select-menu {
+    inset: auto;
+    margin: 0;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #dce6df;
+    border-radius: 12px;
+    background: white;
+    color: var(--ink);
+    box-shadow:
+      0 14px 40px #1536261c,
+      0 3px 8px #1536260a;
+    overflow: hidden;
+    flex-direction: column;
+    z-index: 1000;
+    font-family: inherit;
+  }
+  .qa-select-menu:popover-open {
+    display: flex;
+  }
+  .qa-select-menu:not([popover]) {
+    display: flex;
+  }
+  .qa-select-menu-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 10px 11px;
+    flex-shrink: 0;
+    font-size: 11px;
+    color: #677d6f;
+    font-weight: 500;
+    border-bottom: 1px solid #eef2ef;
+    margin-bottom: 5px;
+  }
+  .qa-select-menu-heading span:last-child {
+    color: #9aa69f;
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .qa-select-options {
+    overflow-y: auto;
+    min-height: 0;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #c6d7cd transparent;
+  }
+  .qa-select-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    user-select: none;
+    touch-action: pan-y;
+  }
+  .qa-select-option + .qa-select-option {
+    margin-top: 3px;
+  }
+  .qa-select-option.is-active {
+    background: #f3f7f4;
+  }
+  .qa-select-option.is-selected {
+    background: #e9f4ee;
+    color: #176448;
+  }
+  .qa-select-option.is-selected.is-active {
+    background: #e2f0e8;
+  }
+  .qa-select-option.is-disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+  .qa-select-option-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .qa-select-option-text strong {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+  .qa-select-option-text small {
+    font-size: 11px;
+    line-height: 1.45;
+    color: #8a978f;
+  }
+  .is-selected .qa-select-option-text small {
+    color: #6f9580;
+  }
+  .qa-select-check {
+    width: 18px;
+    flex: 0 0 18px;
+    display: flex;
+    align-items: center;
+    color: #247957;
+  }
+  .qa-select-option-badge {
+    font-size: 9px;
+    padding: 3px 6px;
+    background: #f1f5f2;
+    color: #7f9185;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .is-selected .qa-select-option-badge {
+    background: #d8ecdf;
+    color: #387254;
+  }
+  .round-toolbar label > .qa-select {
+    flex: 1;
+    min-width: 220px;
+    max-width: 330px;
+  }
+  .round-toolbar .order-selector > .qa-select {
+    min-width: 170px;
+    max-width: 220px;
+  }
+  .scope-toolbar label > .qa-select {
+    min-width: 78px;
+  }
+  .scope-toolbar label:nth-child(2) > .qa-select {
+    min-width: 190px;
+  }
+  .scope-toolbar .qa-select-trigger {
+    min-height: 36px;
+    padding: 7px 10px;
+  }
+  .scope-toolbar .qa-select-value strong {
+    font-size: 12px;
+  }
+  .input-label > .qa-select {
+    width: 100%;
+    font-weight: 400;
+  }
+  @media (max-width: 700px) {
+    .round-toolbar label > .qa-select {
+      max-width: calc(100% - 85px);
+      min-width: 0;
+      width: 100%;
+    }
+    .round-toolbar .order-selector > .qa-select {
+      max-width: calc(100% - 85px);
+      min-width: 0;
+    }
+    .qa-select-trigger {
+      min-height: 44px;
+      padding: 10px 11px;
+    }
+    .qa-select-trigger.has-description {
+      min-height: 55px;
+    }
+    .qa-select-value strong {
+      font-size: 13px;
+    }
+    .qa-select-value small {
+      font-size: 10px;
+    }
+    .qa-select-option {
+      min-height: 48px;
+      padding: 11px 10px;
+    }
+    .qa-select-option-text strong {
+      font-size: 14px;
+    }
+    .qa-select-option-text small {
+      font-size: 11px;
+    }
+    .scope-toolbar label:first-child > .qa-select {
+      width: 80px;
+      min-width: 80px;
+    }
+    .scope-toolbar label:nth-child(2) > .qa-select {
+      min-width: 0;
+      width: 100%;
+      flex: 1;
+    }
+    .scope-toolbar .qa-select-trigger {
+      gap: 5px;
+      padding: 8px 9px;
+      min-height: 38px;
+    }
+    .scope-toolbar .qa-select-value strong {
+      font-size: 11px;
+    }
+    .scope-toolbar .qa-select-chevron {
+      width: 13px;
+    }
+    .qa-select-icon {
+      display: none;
+    }
+    .input-label > .qa-select .qa-select-trigger {
+      min-height: 48px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "COMPOUND QA",
+  "short_name": "COMPOUND QA",
+  "lang": "th",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2365ae",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

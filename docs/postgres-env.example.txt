@@ -1,0 +1,4 @@
+# Copy into .env.development.local or .env.production.local and replace placeholders.
+# Never put real credentials into this example file, Git, or a shared ZIP.
+DATABASE_URL=postgresql://APP_USER:URL_ENCODED_PASSWORD@127.0.0.1:5432/compound_qa
+PG_BIN="C:/Program Files/PostgreSQL/18/bin"
